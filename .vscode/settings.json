@@ -1,0 +1,12 @@
+{
+    "phpsab.fixerEnable": true,
+    "phpsab.executablePathCS": "vendor/bin/phpcs",
+    "phpsab.executablePathCBF": "vendor/bin/phpcbf",
+    "phpsab.standard": "PSR2",
+    "phpsab.snifferMode": "onType",
+    "phpsab.snifferShowSources": true,
+    "[php]": {
+        "editor.defaultFormatter": "valeryanm.vscode-phpsab"
+    },
+    "editor.formatOnSave": true
+}

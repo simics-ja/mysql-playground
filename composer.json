@@ -11,5 +11,8 @@
             "name": "Tomoyuki Shimizu",
             "email": "smz2develop@gmail.com"
         }
-    ]
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.9"
+    }
 }
