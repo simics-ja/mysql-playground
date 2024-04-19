@@ -1,0 +1,15 @@
+{
+    "name": "simics-ja/mysql-playground",
+    "autoload": {
+        "files": ["config/constants.php"],
+        "psr-4": {
+            "Lib\\": "lib/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tomoyuki Shimizu",
+            "email": "smz2develop@gmail.com"
+        }
+    ]
+}
