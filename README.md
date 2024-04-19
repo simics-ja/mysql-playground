@@ -1,2 +1,11 @@
 # MySQL Playground
-This is an environment for technical testing of MySQL.
+This is my technical testing environment for MySQL.
+
+# Requirements
+
+- Docker/docker-compose
+- PHP
+  - The use of mise, the development tool manager, is recommended.
+
+# Usage
+WIP
