@@ -1,3 +1,4 @@
+/case/*/init/*.sql
 /current_case
 /data
 composer.phar
