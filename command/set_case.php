@@ -10,15 +10,15 @@ if (!isset($argv[1])) {
     exit(1);
 }
 $caseName = '/' . PathUtility::trimLeftSlash(PathUtility::trimRightSlash($argv[1]));
-$caseInitPath = PROJECT_ROOT . '/case' . $caseName . '/init';
-if (!is_dir($caseInitPath)) {
-    echo "Error: The '{$caseInitPath}' doesn't exit.";
+$realCasePath = PROJECT_ROOT . '/case' . $caseName;
+if (!is_dir($realCasePath)) {
+    echo "Error: The '{$realCasePath}' doesn't exit.";
     exit(1);
 }
 
-$symlinkPath = PROJECT_ROOT . '/init';
-if (is_link($symlinkPath)) {
-    unlink($symlinkPath);
+$symbolicCasePath = PROJECT_ROOT . '/current_case';
+if (is_link($symbolicCasePath)) {
+    unlink($symbolicCasePath);
 }
-echo "Set init source: {$caseInitPath}\n";
-symlink($caseInitPath, $symlinkPath);
+echo "Set init source: {$realCasePath}\n";
+symlink($realCasePath, $symbolicCasePath);

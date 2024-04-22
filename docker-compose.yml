@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 name: mysql-playground
 
 services:
@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: playground
+      MYSQL_DATABASE: mydb
       # MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_USER: user
       MYSQL_PASSWORD: password
@@ -16,4 +16,4 @@ services:
       - "3306:3306"
     volumes:
       # - ./data:/var/lib/mysql:rw
-      - ./init:/docker-entrypoint-initdb.d:rw
+      - ./current_case/init:/docker-entrypoint-initdb.d:rw
