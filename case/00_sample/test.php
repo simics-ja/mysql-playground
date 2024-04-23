@@ -7,12 +7,12 @@ use Lib\TimeMeter;
 
 $pdo = new PDO(MYSQL_CONFIG['dsn'], MYSQL_CONFIG['user'], MYSQL_CONFIG['password']);
 
-$sql = <<<EOF
-SELECT * FROM `user`;
-EOF;
+$sql = <<<SQL
+SELECT * FROM `user` WHERE created_at < '2000-12-31 23:59:59';
+SQL;
 
 $tm = new TimeMeter();
-for ($i = 0; $i < 10; $i++) {
+for ($i = 0; $i < 5; $i++) {
     $tm->start();
 
     $stmt = $pdo->query($sql);
