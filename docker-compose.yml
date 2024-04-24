@@ -15,3 +15,8 @@ services:
     volumes:
       # - ./data:/var/lib/mysql:rw
       - ./current_case/init:/docker-entrypoint-initdb.d:rw
+  db-mgr:
+    image: adminer:latest
+    restart: always
+    ports:
+      - "8090:8080"
