@@ -10,11 +10,11 @@ This is my technical testing environment for MySQL.
   - Execute `composer install`
 
 # Usage
-1. Select a case you want to test. This command creates the  'current_case' symlink in the project root.
+1. Select a case you want to test. This command creates the  `current_case` symlink in the project root.
 ```
 command/set_case.php 00_sample
 ```
-2. Generate initial data. This command generates a sql file that is used to create tables and insert records as initialization into MySQL. The sql file should be placed in "case/casename/init" to use "docker-entrypoint-initdb.d".
+2. Generate initial data. This command generates a sql file that is used to create tables and insert records as initialization into MySQL. The sql file should be placed in `case/<casename>/init` to use `docker-entrypoint-initdb.d`.
 ```
 command/generate_data.php
 ```
@@ -22,9 +22,11 @@ command/generate_data.php
 ```
 docker-compose up -d
 ```
-4. Start the test. This command execute test.php in the current case directory.
+4. Start the test. This command execute `current_case/test/main.php`. If you want to execute a specific test, you can specify php file in `current_case/test`.
 ```
-command/test_case.php
+command/run_test.php
+or
+command/run_test.php <php-filename>
 ```
 5. Stop MySQL
 ```
